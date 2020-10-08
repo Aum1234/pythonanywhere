@@ -41,12 +41,17 @@
 
         <div class="topnav">
           <a class="active" href="/index">Home</a>
-          <a href="/signup">Signup</a>
-          <a href="/">Login</a>
-          <a href="/logout">Logout</a>
+          <a href="#">News</a>
+          <a href="#contact">Contact</a>
+          <a href="#about">About</a>
         </div>
-<p>Hi! {{user}}</p>
-
         </body>
+<h>Signup</h>
+<form method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="Sign up">
+</form>
+
 </body>
 </html>

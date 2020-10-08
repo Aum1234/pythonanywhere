@@ -41,12 +41,17 @@
 
         <div class="topnav">
           <a class="active" href="/index">Home</a>
-          <a href="/signup">Signup</a>
           <a href="/">Login</a>
-          <a href="/logout">Logout</a>
+          <a href="/signup">Signup</a>
+          <a href="#about">About</a>
         </div>
-<p>Hi! {{user}}</p>
-
         </body>
+<h>Login</h>
+<form method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    {% if form.errors %}<p> Try again </p>{% endif %}
+    <input type="submit" value="Login">
+</form>
 </body>
 </html>
