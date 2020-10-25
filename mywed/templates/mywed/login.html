@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TakataFood</title>
+    <link rel="shortcut icon" href="static/images/res-icon.png"/>
 </head>
 <body>
     <style>
@@ -35,23 +36,45 @@
           background-color: #4CAF50;
           color: white;
         }
+
+/* Background */
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.bg {
+  /* The image used */
+  background-image: url("https://image.freepik.com/free-photo/wooden-board-empty-table-top-blurred-background_1253-1584.jpg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
         </style>
-        </head>
-        <body>
+    </head>
+<body>
 
         <div class="topnav">
-          <a class="active" href="/index">Home</a>
-          <a href="/">Login</a>
-          <a href="/signup">Signup</a>
-          <a href="#about">About</a>
+          <a class="active" href="/index">Back</a>
         </div>
         </body>
-<h>Login</h>
-<form method="post">
+<div class="bg"><br>
+<h3 align="center">Login</h3>
+<form method="post" align="center">
     {% csrf_token %}
     {{form.as_p}}
     {% if form.errors %}<p> Try again </p>{% endif %}
+    <strong><a href="signup">REGISTER!</a></strong><br><br>
     <input type="submit" value="Login">
-</form>
+    {% if form.errors %}
+                        <p style="color:white;"> Try again </p>
+                        <script>alert("ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้องนะคะ")</script>
+                        {% endif %}
+</form></div>
 </body>
 </html>

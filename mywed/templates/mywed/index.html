@@ -1,9 +1,15 @@
 <!DOCTYPE html>
+{% load static%}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TakataFood</title>
+    <link rel="shortcut icon" href="static/images/res-icon.png"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
 </head>
 <body>
     <style>
@@ -35,6 +41,27 @@
           background-color: #4CAF50;
           color: white;
         }
+
+/* Background */
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.bg {
+  /* The image used */
+  background-image: url("/static/images/bgres.jpg");
+
+  /* Full height */
+  width: 100%;
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: space;
+  background-size: cover;
+}
+
         </style>
         </head>
         <body>
@@ -44,9 +71,93 @@
           <a href="/signup">Signup</a>
           <a href="/">Login</a>
           <a href="/logout">Logout</a>
+          <a href="/foradmin">InsertRestaurants</a>
+          <p align = 'right'><font color ="#3678BC">Welcome {{user}}.</font></p>
         </div>
-<p>Hi! {{user}}</p>
+
 
         </body>
+<div class="bg"></div>
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+
+  <!-- First Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+    <div class="w3-quarter">
+      <img src="https://img.wongnai.com/p/1968x0/2017/03/31/5369bec07ffc42ef9ae2394f025eccdd.jpg" alt="Sandwich" style="width:100%">
+      <h3>Salt//Pepper</h3>
+      <p>ตั้งอยู่ที่ อาคารสยามพารากอน(Siam Paragon ชั้น 4 โซน Food Passage) ปทุมวัน , ปทุมวัน , กรุงเทพมหานคร</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="https://img.wongnai.com/p/1968x0/2018/09/26/02bb3bfaf7184b0fb6461468f29f7b52.jpg" alt="Steak" style="width:100%">
+      <h3>Jim Thompson Restaurant and Lounge</h3>
+      <p>ตั้งอยู่ที่ ถนน สุรวงศ์ (ร้านตั้งอยู่ริมถนนสุรวงศ์ เยื้องโรงแรมตะวันนา) สุริยวงศ์ , บางรัก , กรุงเทพมหานคร เบอร์ติดต่อ 022358932</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="https://img.wongnai.com/p/1968x0/2018/09/07/653b3072f7624667b95717d7c6f0bf80.jpg" alt="Cherries" style="width:100%">
+      <h3>November Cafe</h3>
+      <p>ตั้งอยู่ที่ ถนนพุทธมณฑลสาย 2(โครงการจตุจักรสาย 2 ) ทวีวัฒนา , ทวีวัฒนา , กรุงเทพมหานคร เบอร์ติดต่อ 0982263629</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="https://img.wongnai.com/p/1968x0/2018/09/25/e3148e7d80484a6a814e419b0de276cd.jpg" alt="Pasta and Wine" style="width:100%">
+      <h3>IPPUDO Ramen</h3>
+      <p>งอยู่ที่ ถนน สุขุมวิท ซอยสุขุมวิท 55 (ระหว่างทองหล่อ15กับ17) คลองตันเหนือ , วัฒนา , กรุงเทพมหานคร เบอร์ติดต่อ 027129678</p>
+    </div>
+  </div>
+
+  <!-- Second Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-quarter">
+      <img src="https://img.wongnai.com/p/1968x0/2017/01/11/61cd5a135c55403c8d79cc8012f05f00.jpg" alt="Popsicle" style="width:100%">
+      <h3>SUPER SEOUL CAFE</h3>
+      <p>ตั้งอยู่ที่ 50-52 ซอย สาทร11(ตรงข้ามคอนโด CENTPIC)ยานนาวา , สาทร , กรุงเทพมหานคร เบอร์ติดต่อ0818817767</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="https://img.wongnai.com/p/1968x0/2018/05/18/f81b639c7dff450fba4ebcac68ccbb13.jpg" alt="Salmon" style="width:100%">
+      <h3>The Meatchop Butcher & Spirits</h3>
+      <p>ตั้งอยู่ที่ ถนน พระราม 4 (ศาลาแดงซอย 1)สีลม , บางรัก , กรุงเทพมหานคร เบอร์ติดต่อ 02-033-2709</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="https://img.wongnai.com/p/1968x0/2018/06/19/4d1fcefe815b4c8cacee79fbc963cc38.jpg" alt="Sandwich" style="width:100%">
+      <h3>Fuzio Café</h3>
+      <p>ตั้งอยู่ที่ ซอย ทองหล่อ15 ถนน สุขุมวิท(ตั้งอยู่ที่ : เจ อเวนิว ทองหล่อ(ชั้น2))คลองตันเหนือ , วัฒนา , กรุงเทพมหานคร เบอร์ติดต่อ 098-283-6414</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="https://img.wongnai.com/p/1968x0/2018/09/26/3fb9c9bd7c3d4b8484d3615c036727ea.jpg" alt="Croissant" style="width:100%">
+      <h3>The Missing Burro</h3>
+      <p>ตั้งอยู่ที่ 145 สุขุมวิท 55 ซอย ทองหล่อ 7(ตั้งอยู่ที่ : เข้าไปในซอยทองหล่อ 7 ประมาณ 80 เมตร) คลองตันเหนือ , วัฒนา , กรุงเทพมหานคร เบอร์ติดต่อ 090-913-2131</p>
+    </div>
+    {% for a in inputrestaurants %}
+    <div class="w3-quarter">
+      <img src="{{a.img}}" alt="Sandwich" style="width:100%">
+      <h3>{{a.restaurantname}}</h3>
+      <p>{{a.address}}</p>
+    </div>
+    {% endfor %}
+  </div>
+
+  <hr id="about">
+  <div class="w3-container w3-padding-32 w3-center">
+    <h3>TAKATA FOOD</h3><br>
+    <img src="/static/images/res-icon.png" width="50" height="50">
+    <div class="w3-padding-32">
+      <h4><b>WELCOME TO WEBSITE !</b></h4>
+      <h6><i>Have fun browsing the website.</i></h6>
+      <p>Design by LALIDA.</p>
+    </div>
+  </div>
+  <hr>
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
 </body>
 </html>

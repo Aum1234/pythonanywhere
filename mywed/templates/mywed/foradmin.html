@@ -1,10 +1,15 @@
 <!DOCTYPE html>
+{% load static%}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TakataFood</title>
     <link rel="shortcut icon" href="static/images/res-icon.png"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
 </head>
 <body>
     <style>
@@ -45,7 +50,7 @@ body, html {
 
 .bg {
   /* The image used */
-  background-image: url("https://image.freepik.com/free-photo/wooden-board-empty-table-top-blurred-background_1253-1584.jpg");
+  background-image: url("https://images.unsplash.com/photo-1580099448803-077a3673dbca?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1049&q=80");
 
   /* Full height */
   height: 100%;
@@ -55,21 +60,26 @@ body, html {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
         </style>
         </head>
         <body>
 
         <div class="topnav">
-          <a class="active" href="/index">Back</a>
+          <a class="active" href="/index">Home</a>
+          <a href="/signup">Signup</a>
+          <a href="/">Login</a>
         </div>
+
+
         </body>
-<div class="bg"><br>
-<h3 align="center">Signup</h3>
-    <form method="post" align="center">
-        {% csrf_token %}
-        {{form.as_p}}
-        <input type="submit" value="Sign up">
-    </form>
-</div>
+    <h2>INSERT<em>RESTAURANTS</em></h2>
+            <form method="POST">
+                {% csrf_token %}
+                ImgsUrl : <input type="text" name="img"><br><br>
+                ชื่อร้านอาหาร : <input type="text" name="restaurantname"><br><br>
+                ที่อยู่ : <input type="text" name="address"><br><br>
+                <input type="submit">
+            </form>
 </body>
 </html>

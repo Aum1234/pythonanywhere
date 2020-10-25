@@ -8,6 +8,8 @@ urlpatterns = [
 	path('index', views.index , name='index'),
 	path('signup', views.signup, name='signup'),
     path('logout',views.logout, name='logout'),
+    path('foradmin',views.foradmin, name='foradmin'),
+    path('contact',views.contact, name='contact'),
 #	path('mywed/', include('mywed.urls')),
 	path('admin/', admin.site.urls),
 ]

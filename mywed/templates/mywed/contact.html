@@ -56,20 +56,16 @@ body, html {
   background-size: cover;
 }
         </style>
-        </head>
-        <body>
+    </head>
+<body>
 
         <div class="topnav">
-          <a class="active" href="/index">Back</a>
+          <a class="active" href="/index">Home</a>
+          <a href="#contact">Contact</a>
+          <a href="#about">About</a>
         </div>
         </body>
 <div class="bg"><br>
-<h3 align="center">Signup</h3>
-    <form method="post" align="center">
-        {% csrf_token %}
-        {{form.as_p}}
-        <input type="submit" value="Sign up">
-    </form>
 </div>
 </body>
 </html>
